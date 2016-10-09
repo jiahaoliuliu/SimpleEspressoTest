@@ -72,4 +72,35 @@ public class SimplePopUpYesNoDialogActivityTest {
                 .check(matches(withText(android.R.string.no)))
                 .check(matches(isDisplayed()));
     }
+
+    @Test
+    public void testOnPositiveButtonClick() throws Exception {
+        // Click on the button
+        onView(withId(R.id.display_pop_up_button))
+                .perform(click());
+
+        // Positive button
+        onView(withId(android.R.id.button1))
+                .perform(click());
+
+        // Check the dialog has dismissed
+        onView(withId(R.id.display_pop_up_button))
+                .check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testOnNegativeButtonClick() throws Exception {
+        // Click on the button
+        onView(withId(R.id.display_pop_up_button))
+                .perform(click());
+
+        // Negative button
+        onView(withId(android.R.id.button2))
+                .perform(click());
+
+        // Check the dialog has dismissed
+        onView(withId(R.id.display_pop_up_button))
+                .check(matches(isDisplayed()));
+    }
+
 }
