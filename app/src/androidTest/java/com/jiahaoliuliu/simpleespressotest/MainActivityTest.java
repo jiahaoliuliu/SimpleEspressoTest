@@ -53,8 +53,9 @@ public class MainActivityTest {
     }
 
     @Test
-    public void clickOnTheSimpleButton() {
-        // Click on the item with the name of the activity simple button
+    public void simpleButtonActivityInvocationTest() {
+
+        // Simple button activity
         onView(withId(R.id.tests_recycler_view))
                 .perform(RecyclerViewActions.actionOnItem(hasDescendant(withText(R.string.simple_button_activity)), click()));
 
