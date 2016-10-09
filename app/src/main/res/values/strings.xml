@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SimpleEspressoTest</string>
+    <string name="simple_button_activity">Simple button activity</string>
 </resources>

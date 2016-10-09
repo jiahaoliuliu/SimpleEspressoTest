@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView
+<TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tests_recycler_view"
+    android:id="@+id/test_title_text_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jiahaoliuliu.simpleespressotest.MainActivity">
-</android.support.v7.widget.RecyclerView>
+    tools:context="com.jiahaoliuliu.simpleespressotest.MainActivity"
+    android:gravity="left"
+    />
