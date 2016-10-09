@@ -35,4 +35,12 @@
     <string name="radio_button_5">Radio button 5</string>
     <string name="radio_button_6">Radio button 6</string>
     <string name="radio_button_7">Radio button 7</string>
+
+    <!-- Simple pop up yes no dialog -->
+    <string name="display_pop_up_button">Show pop up</string>
+    <string name="alert_dialog_title">Alert!</string>
+    <string name="alert_dialog_message">Are you happy?</string>
+    <string name="alert_dialog_positive_button">Yes</string>
+    <string name="alert_dialog_negative_button">Nope</string>
+
 </resources>
