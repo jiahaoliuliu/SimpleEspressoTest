@@ -1,5 +1,6 @@
 package com.jiahaoliuliu.simpleespressotest;
 
+import android.support.test.espresso.Espresso;
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;
@@ -11,8 +12,11 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -46,5 +50,27 @@ public class MainActivityTest {
             // It is also possible press back
 //            Espresso.pressBack();
         }
+    }
+
+    @Test
+    public void clickOnTheSimpleButton() {
+        // Click on the item with the name of the activity simple button
+        onView(withId(R.id.tests_recycler_view))
+                .perform(RecyclerViewActions.actionOnItem(hasDescendant(withText(R.string.simple_button_activity)), click()));
+
+        // Check the normal state of the text
+        onView(withId(R.id.simple_text_view))
+                .check(matches(withText(R.string.simple_text_view)));
+
+        // Click on the button
+        onView(withId(R.id.simple_button))
+                .perform(click());
+
+        // Check the changes on the text view
+        onView(withId(R.id.simple_text_view))
+                .check(matches(withText(R.string.simple_text_view_clicked)));
+
+        // Come back to the list
+        Espresso.pressBack();
     }
 }
