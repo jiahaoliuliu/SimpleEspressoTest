@@ -29,7 +29,11 @@ public class SimpleEditTextActivity extends ChildActivity {
         mCopyButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                // Copy the text
                 mDestinationTextView.setText(mSourceEditText.getText().toString());
+
+                // Clean the edit text
+                mSourceEditText.setText("");
             }
         });
     }
