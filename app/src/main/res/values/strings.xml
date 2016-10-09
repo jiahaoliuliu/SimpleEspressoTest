@@ -23,4 +23,7 @@
     <string name="check_box_5">Check box 5</string>
     <string name="check_box_6">Check box 6</string>
     <string name="check_box_7">Check box 7</string>
+
+    <!-- Simple edit text activity -->
+    <string name="copy_button">Copy</string>
 </resources>
