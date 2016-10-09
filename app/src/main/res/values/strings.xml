@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleEspressoTest</string>
+    <string name="simple_button">Click me!</string>
+    <string name="simple_button_clicked">Tachan!</string>
 </resources>
