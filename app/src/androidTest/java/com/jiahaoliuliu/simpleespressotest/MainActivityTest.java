@@ -1,7 +1,5 @@
 package com.jiahaoliuliu.simpleespressotest;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;
@@ -13,6 +11,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
@@ -31,13 +30,16 @@ public class MainActivityTest {
     // Reference: http://stackoverflow.com/questions/28476507/using-espresso-to-click-view-inside-recyclerview-item
     @Test
     public void itemClicksTest() {
+        for (int i = 0; i < MainActivity.TestActivity.values().length; i++) {
+            onView(withId(R.id.tests_recycler_view))
+                    .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));
 
-        onView(withId(R.id.tests_recycler_view))
-                .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+            // Click on the back button on the action bar
+            // http://stackoverflow.com/questions/23985181/click-home-icon-with-espresso
+            onView(withContentDescription(R.string.abc_action_bar_up_description)).perform(click());
 
-//        for (int i = 0; i < MainActivity.TestActivity.values().length; i++) {
-//            onView(withId(R.id.tests_recycler_view))
-//                    .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));
-//        }
+            // It is also possible press back
+//            Espresso.pressBack();
+        }
     }
 }
