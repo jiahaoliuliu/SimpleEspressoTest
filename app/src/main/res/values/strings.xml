@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SimpleEspressoTest</string>
+
+    <!-- Activities names -->
+    <string name="simple_button_activity">Simple button activity</string>
+    <string name="simple_check_boxes_activity">Simple check boxes activity</string>
+    <string name="simple_edit_text_activity">Simple edit text activity</string>
+    <string name="simple_map_activity">Simple map activity</string>
+    <string name="simple_pop_up_list_dialog_activity">Simple pop up list dialog activity</string>
+    <string name="simple_pop_up_yes_no_dialog_activity">Simple pop up yes/no boxes activity</string>
+    <string name="simple_radio_buttons_activity">Simple radio buttons activity</string>
+
 </resources>

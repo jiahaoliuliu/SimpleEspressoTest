@@ -15,6 +15,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SimpleButtonActivity"
+            android:label="@string/simple_button_activity" />
+
+        <activity android:name=".SimpleCheckBoxesActivity"
+            android:label="@string/simple_check_boxes_activity"
+            />
+        <activity android:name=".SimpleEditTextActivity"
+            android:label="@string/simple_edit_text_activity"
+            />
+        <activity android:name=".SimpleRadioButtonsActivity"
+            android:label="@string/simple_radio_buttons_activity"
+            />
+        <activity android:name=".SimplePopUpListDialogActivity"
+            android:label="@string/simple_pop_up_list_dialog_activity"
+            />
+        <activity android:name=".SimplePopUpYesNoDialogActivity"
+            android:label="@string/simple_pop_up_yes_no_dialog_activity"
+            />
+        <activity android:name=".SimpleMapActivity"
+            android:label="@string/simple_map_activity"/>
     </application>
 
 </manifest>
