@@ -14,4 +14,16 @@
     <string name="simple_button">Click me!</string>
     <string name="simple_text_view">Click on the button!</string>
     <string name="simple_text_view_clicked">Tachan!</string>
+
+    <!-- Simple check boxes activity -->
+    <string name="check_box_1">Check box 1</string>
+    <string name="check_box_2">Check box 2</string>
+    <string name="check_box_3">Check box 3</string>
+    <string name="check_box_4">Check box 4</string>
+    <string name="check_box_5">Check box 5</string>
+    <string name="check_box_6">Check box 6</string>
+    <string name="check_box_7">Check box 7</string>
+
+    <!-- Simple edit text activity -->
+    <string name="copy_button">Copy</string>
 </resources>
