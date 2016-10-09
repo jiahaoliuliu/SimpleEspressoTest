@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView mSimpleTextView;
     private Button mSimpleButton;
 
     @Override
@@ -16,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Link the views
+        mSimpleTextView = (TextView) findViewById(R.id.simple_text_view);
         mSimpleButton = (Button) findViewById(R.id.simple_button);
         mSimpleButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 // Change the text on the text view
-                mSimpleButton.setText(R.string.simple_button_clicked);
+                mSimpleTextView.setText(R.string.simple_text_view_clicked);
             }
         });
     }
