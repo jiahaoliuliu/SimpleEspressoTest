@@ -10,4 +10,8 @@
     <string name="simple_pop_up_yes_no_dialog_activity">Simple pop up yes/no boxes activity</string>
     <string name="simple_radio_buttons_activity">Simple radio buttons activity</string>
 
+    <!-- Simple button activity -->
+    <string name="simple_button">Click me!</string>
+    <string name="simple_text_view">Click on the button!</string>
+    <string name="simple_text_view_clicked">Tachan!</string>
 </resources>

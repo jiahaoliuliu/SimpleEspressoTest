@@ -19,6 +19,11 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+/**
+ * Created by jiahao on 09/10/16.
+ */
+
 @RunWith(AndroidJUnit4.class)
 @SmallTest
 public class MainActivityTest {
