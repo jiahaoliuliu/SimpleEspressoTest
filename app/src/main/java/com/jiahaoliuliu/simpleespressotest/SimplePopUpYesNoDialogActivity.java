@@ -37,8 +37,8 @@ public class SimplePopUpYesNoDialogActivity extends ChildActivity {
         mSimpleAlertDialog = new AlertDialog.Builder(SimplePopUpYesNoDialogActivity.this)
                 .setTitle(R.string.alert_dialog_title)
                 .setMessage(R.string.alert_dialog_message)
-                .setPositiveButton(R.string.alert_dialog_positive_button, null)
-                .setNegativeButton(R.string.alert_dialog_negative_button, null)
+                .setPositiveButton(android.R.string.yes, null)
+                .setNegativeButton(android.R.string.no, null)
                 .create();
 
         mSimpleAlertDialog.show();
