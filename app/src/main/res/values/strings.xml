@@ -26,4 +26,13 @@
 
     <!-- Simple edit text activity -->
     <string name="copy_button">Copy</string>
+
+    <!-- Simple radio buttons activity -->
+    <string name="radio_button_1">Radio button 1</string>
+    <string name="radio_button_2">Radio button 2</string>
+    <string name="radio_button_3">Radio button 3</string>
+    <string name="radio_button_4">Radio button 4</string>
+    <string name="radio_button_5">Radio button 5</string>
+    <string name="radio_button_6">Radio button 6</string>
+    <string name="radio_button_7">Radio button 7</string>
 </resources>
