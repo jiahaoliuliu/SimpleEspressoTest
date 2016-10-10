@@ -35,8 +35,8 @@
             android:name=".SimplePopUpYesNoDialogActivity"
             android:label="@string/simple_pop_up_yes_no_dialog_activity" />
         <activity
-            android:name=".SimpleMapActivity"
-            android:label="@string/simple_map_activity" />
+            android:name=".SimpleSlidingMenuActivity"
+            android:label="@string/simple_sliding_menu_activity" />
 
         <activity
             android:name=".SimpleWebViewActivity"
