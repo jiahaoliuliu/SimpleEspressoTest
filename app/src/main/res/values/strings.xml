@@ -9,6 +9,7 @@
     <string name="simple_pop_up_list_dialog_activity">Simple pop up list dialog activity</string>
     <string name="simple_pop_up_yes_no_dialog_activity">Simple pop up yes/no boxes activity</string>
     <string name="simple_radio_buttons_activity">Simple radio buttons activity</string>
+    <string name="simple_web_view_activity">Simple web view activity</string>
 
     <!-- Simple button activity -->
     <string name="simple_button">Click me!</string>
