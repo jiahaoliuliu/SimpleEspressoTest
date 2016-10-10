@@ -7,8 +7,7 @@ import android.webkit.WebViewClient;
 
 public class SimpleWebViewActivity extends ChildActivity {
 
-    private static final String WEB_URL = "http://www.jiahaoliuliu.com";
-    private static final String WEB_URL_2 = "http://www.google.com";
+    private static final String WEB_URL = "http://www.google.com";
 
     private WebView mSimpleWebView;
 
@@ -24,7 +23,6 @@ public class SimpleWebViewActivity extends ChildActivity {
         mSimpleWebView.getSettings().setJavaScriptEnabled(true);
         mSimpleWebView.setWebViewClient(new WebViewClient());
         mSimpleWebView.loadUrl(WEB_URL);
-//        mSimpleWebView.loadUrl(WEB_URL_2);
     }
 
     @Override
