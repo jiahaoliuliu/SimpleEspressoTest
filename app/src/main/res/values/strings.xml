@@ -36,9 +36,17 @@
     <string name="radio_button_6">Radio button 6</string>
     <string name="radio_button_7">Radio button 7</string>
 
-    <!-- Simple pop up yes no dialog -->
+    <!-- Simple pop up yes no dialog activity -->
     <string name="display_pop_up_button">Show pop up</string>
     <string name="alert_dialog_title">Alert!</string>
     <string name="alert_dialog_message">Are you happy?</string>
+
+    <!-- Simple pop up list dialog activity -->
+    <string name="alert_dialog_language_title">Choose your language</string>
+    <string name="list_option_1">English</string>
+    <string name="list_option_2">Arabic</string>
+    <string name="list_option_3">Urdu</string>
+    <string name="list_option_4">Turk</string>
+    <string name="list_option_5">Chinese</string>
 
 </resources>
