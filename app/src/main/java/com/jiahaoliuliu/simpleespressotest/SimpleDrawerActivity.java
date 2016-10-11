@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class SimpleDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,6 +24,7 @@ public class SimpleDrawerActivity extends AppCompatActivity
 
     // Views
     private DrawerLayout mDrawer;
+    private TextView mContentTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +36,12 @@ public class SimpleDrawerActivity extends AppCompatActivity
         // Set the back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Link the views
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mContentTextView = (TextView) findViewById(R.id.content_text_view);
     }
 
     @Override
@@ -81,20 +85,25 @@ public class SimpleDrawerActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch(item.getItemId()) {
+            case R.id.nav_camera:
+                mContentTextView.setText(R.string.nav_camera);
+                break;
+            case R.id.nav_gallery:
+                mContentTextView.setText(R.string.nav_gallery);
+                break;
+            case R.id.nav_slideshow:
+                mContentTextView.setText(R.string.nav_slideshow);
+                break;
+            case R.id.nav_manage:
+                mContentTextView.setText(R.string.nav_manage);
+                break;
+            case R.id.nav_share:
+                mContentTextView.setText(R.string.nav_share);
+                break;
+            case R.id.nav_send:
+                mContentTextView.setText(R.string.nav_send);
+                break;
         }
 
         closeDrawer();
