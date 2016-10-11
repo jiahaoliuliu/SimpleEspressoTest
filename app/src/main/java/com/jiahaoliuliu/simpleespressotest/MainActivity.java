@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
         SIMPLE_BUTTON_ACTIVITY(R.string.simple_button_activity, SimpleButtonActivity.class)
         , SIMPLE_CHECK_BOXES_ACTIVITY(R.string.simple_check_boxes_activity, SimpleCheckBoxesActivity.class)
         , SIMPLE_EDIT_TEXT_ACTIVITY(R.string.simple_edit_text_activity, SimpleEditTextActivity.class)
-        , SIMPLE_SLIDING_MENU_ACTIVITY(R.string.simple_sliding_menu_activity, SimpleSlidingMenuActivity.class)
         , SIMPLE_DRAWER_ACTIVITY(R.string.simple_drawer_activity, SimpleDrawerActivity.class)
         , SIMPLE_POP_UP_LIST_DIALOG(R.string.simple_pop_up_list_dialog_activity, SimplePopUpListDialogActivity.class)
         , SIMPLE_POP_UP_YES_NO_DIALOG(R.string.simple_pop_up_yes_no_dialog_activity, SimplePopUpYesNoDialogActivity.class)

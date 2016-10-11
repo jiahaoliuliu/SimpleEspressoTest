@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,8 +20,6 @@ public class SimpleDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "SimpleDrawerActivity";
-
-    private static final int MENU_ITEM_SLIDING_MENU_ID = 1000;
 
     // Views
     private DrawerLayout mDrawer;
@@ -56,12 +55,9 @@ public class SimpleDrawerActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem menuItemSlidingMenu = menu.add(Menu.NONE, MENU_ITEM_SLIDING_MENU_ID, Menu
-                .NONE, R.string.action_bar_open_menu)
-                .setIcon(R.mipmap.ic_sliding_menu);
-        menuItemSlidingMenu.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
-
-        return super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.drawer_menu, menu);
+        return true;
     }
 
     @Override
@@ -73,7 +69,7 @@ public class SimpleDrawerActivity extends AppCompatActivity
             case android.R.id.home:
                 onBackPressed();
                 return true;
-            case MENU_ITEM_SLIDING_MENU_ID:
+            case R.id.action_open_drawer:
                 openDrawer();
                 return true;
             default:
