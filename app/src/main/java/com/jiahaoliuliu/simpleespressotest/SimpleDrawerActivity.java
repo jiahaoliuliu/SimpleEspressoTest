@@ -3,6 +3,7 @@ package com.jiahaoliuliu.simpleespressotest;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,13 @@ import android.view.MenuItem;
 public class SimpleDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String TAG = "SimpleDrawerActivity";
+
+    private static final int MENU_ITEM_SLIDING_MENU_ID = 1000;
+
+    // Views
+    private DrawerLayout mDrawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,14 +31,13 @@ public class SimpleDrawerActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+        // Set the back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     }
 
     @Override
@@ -45,9 +52,12 @@ public class SimpleDrawerActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.simple_drawer, menu);
-        return true;
+        MenuItem menuItemSlidingMenu = menu.add(Menu.NONE, MENU_ITEM_SLIDING_MENU_ID, Menu
+                .NONE, R.string.action_bar_open_menu)
+                .setIcon(R.mipmap.ic_sliding_menu);
+        menuItemSlidingMenu.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -55,14 +65,16 @@ public class SimpleDrawerActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            case MENU_ITEM_SLIDING_MENU_ID:
+                openDrawer();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -85,8 +97,25 @@ public class SimpleDrawerActivity extends AppCompatActivity
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.END);
+        closeDrawer();
         return true;
+    }
+
+    private void openDrawer() {
+        if (mDrawer == null) {
+            Log.w(TAG, "Trying to close the drawer but it s null");
+            return;
+        }
+
+        mDrawer.openDrawer(GravityCompat.END);
+    }
+
+    private void closeDrawer() {
+        if (mDrawer == null) {
+            Log.w(TAG, "Trying to close the drawer but it s null");
+            return;
+        }
+
+        mDrawer.closeDrawer(GravityCompat.END);
     }
 }
