@@ -38,7 +38,7 @@ public class MainActivityTest {
     // Test used to click on all the items in the list
     // Reference: http://stackoverflow.com/questions/28476507/using-espresso-to-click-view-inside-recyclerview-item
     @Test
-    public void itemClicksTest() {
+    public void onAllActivititesClickedTest() {
         for (int i = 0; i < MainActivity.TestActivity.values().length; i++) {
             onView(withId(R.id.tests_recycler_view))
                     .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));

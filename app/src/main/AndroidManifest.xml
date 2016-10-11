@@ -13,6 +13,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,13 +36,12 @@
             android:name=".SimplePopUpYesNoDialogActivity"
             android:label="@string/simple_pop_up_yes_no_dialog_activity" />
         <activity
-            android:name=".SimpleMapActivity"
-            android:label="@string/simple_map_activity" />
-
-        <activity
             android:name=".SimpleWebViewActivity"
-            android:label="@string/simple_web_view_activity"
-            />
+            android:label="@string/simple_web_view_activity" />
+        <activity
+            android:name=".SimpleDrawerActivity"
+            android:label="@string/title_activity_simple_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -5,7 +5,8 @@
     <string name="simple_button_activity">Simple button activity</string>
     <string name="simple_check_boxes_activity">Simple check boxes activity</string>
     <string name="simple_edit_text_activity">Simple edit text activity</string>
-    <string name="simple_map_activity">Simple map activity</string>
+    <string name="simple_sliding_menu_activity">Simple sliding menu activity</string>
+    <string name="simple_drawer_activity">Simple drawer activity</string>
     <string name="simple_pop_up_list_dialog_activity">Simple pop up list dialog activity</string>
     <string name="simple_pop_up_yes_no_dialog_activity">Simple pop up yes/no boxes activity</string>
     <string name="simple_radio_buttons_activity">Simple radio buttons activity</string>
@@ -49,5 +50,18 @@
     <string name="list_option_3">Urdu</string>
     <string name="list_option_4">Turk</string>
     <string name="list_option_5">Chinese</string>
+    <string name="action_bar_open_menu">Open menu</string>
+    <string name="title_activity_simple_drawer">SimpleDrawerActivity</string>
+
+    <!-- Simple drawer activity -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_camera">Camera</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_slideshow">Slide show</string>
+    <string name="nav_manage">Tools</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_send">Send</string>
 
 </resources>

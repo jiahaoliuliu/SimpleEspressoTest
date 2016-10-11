@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- "Open drawer", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_open_drawer"
+        android:icon="@mipmap/ic_sliding_menu"
+        android:title="@string/action_bar_open_menu"
+        app:showAsAction="ifRoom"/>
+
+</menu>
