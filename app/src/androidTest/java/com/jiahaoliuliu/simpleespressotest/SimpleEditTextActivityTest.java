@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isChecked;
@@ -50,7 +51,7 @@ public class SimpleEditTextActivityTest {
 
         // Set some text
         onView(withId(R.id.source_edit_text))
-                .perform(typeText(textToCheck));
+                .perform(typeText(textToCheck), closeSoftKeyboard());
 
         // Click on the button
         onView(withId(R.id.copy_button))
@@ -59,9 +60,5 @@ public class SimpleEditTextActivityTest {
         // Check the result has been copied
         onView(withId(R.id.destination_text_view))
                 .check(matches(withText(textToCheck)));
-
-        // Closes the soft key
-        Espresso.closeSoftKeyboard();
-
     }
 }
