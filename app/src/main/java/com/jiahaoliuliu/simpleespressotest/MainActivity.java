@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         , SIMPLE_POP_UP_YES_NO_DIALOG(R.string.simple_pop_up_yes_no_dialog_activity, SimplePopUpYesNoDialogActivity.class)
         , SIMPLE_RADIO_BUTTONS_ACTIVITY(R.string.simple_radio_buttons_activity, SimpleRadioButtonsActivity.class)
         , SIMPLE_WEB_VIEW_ACTIVITY(R.string.simple_web_view_activity, SimpleWebViewActivity.class)
+        , ACTIVITY_AS_DIALOG_ACTIVITY(R.string.activity_as_dialog_activity, ActivityAsDialogActivity.class)
         ;
 
         private int mActivityTitleId;
