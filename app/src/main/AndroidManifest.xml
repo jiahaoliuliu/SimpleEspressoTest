@@ -41,7 +41,12 @@
         <activity
             android:name=".SimpleDrawerActivity"
             android:label="@string/title_activity_simple_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityAsDialogActivity" />
+
+        <activity android:name=".DialogActivity"
+            android:theme="@style/Theme.Dialog.NoTitle"
+            />
     </application>
 
 </manifest>

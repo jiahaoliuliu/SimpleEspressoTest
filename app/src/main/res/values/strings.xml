@@ -11,6 +11,7 @@
     <string name="simple_pop_up_yes_no_dialog_activity">Simple pop up yes/no boxes activity</string>
     <string name="simple_radio_buttons_activity">Simple radio buttons activity</string>
     <string name="simple_web_view_activity">Simple web view activity</string>
+    <string name="activity_as_dialog_activity">Activity as dialog</string>
 
     <!-- Simple button activity -->
     <string name="simple_button">Click me!</string>
@@ -63,5 +64,10 @@
     <string name="nav_manage">Tools</string>
     <string name="nav_share">Share</string>
     <string name="nav_send">Send</string>
+
+    <!-- Activity as dialog activity -->
+    <string name="display_dialog">Display dialog</string>
+    <string name="dialog_activity_message">This is a dialog</string>
+    <string name="dialog_activity_button">Close</string>
 
 </resources>
